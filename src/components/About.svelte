@@ -24,9 +24,9 @@
 				<h2>Who am I?</h2>
 			</div>
 			<p>I'm a freelance and hobbyist web developer, and I think interacting with websites and apps should be <em>fun</em>.</p>
-			<p>I love <strong>designing satisfying user experiences</strong>&mdash;from animations and effects to back-end logic and data delivery. The absolute coolest thing about development is creating flexible systems that hide complex sequences behind simple interfaces. Pushing a button and watching something just <em>work</em> is so satisfying!</p>
+			<p>I love <strong>designing satisfying user experiences</strong>&mdash;from animations and effects to back-end logic and data delivery. The absolute coolest thing about development is creating flexible systems that hide complex interactions behind simple interfaces. Pushing a button and watching something just <em>work</em> is so satisfying!</p>
 			<p>
-				<strong>Currently learning: </strong>Advanced <a href="https://www.tiny.cloud/" target="_blank">TinyMCE</a> topics, Calculus<br/>
+				<strong>Currently learning: </strong>Customizing <a href="https://www.tiny.cloud/" target="_blank">TinyMCE</a><br/>
 				<strong>Current projects: </strong>The <a href="https://hammockcms.com" target="_blank">Hammock CMS</a> alpha
 			</p>
 		</div>
@@ -88,7 +88,7 @@
 		grid-gap: 8vw;
 		position: relative;
 
-		@media screen and (min-width: 1500px) {
+		@media screen and (min-width: 650px) {
 			grid-gap: 3em;
 			grid-template-columns: 1fr 1fr;
 		}
@@ -157,12 +157,12 @@
 			background-color: $darkblue;
 			box-shadow: 0 0 0 2px $darkblue;
 
-			@media screen and (max-width: 1499px) {
+			@media screen and (max-width: 649px) {
 				text-align: center;
 				margin: 0 auto;
 			}
 			
-			@media screen and (min-width: 1500px) {
+			@media screen and (min-width: 650px) {
 				padding-left: 1em;
 			}
 		}
@@ -219,7 +219,7 @@
 		transform: translateX(0);
 	}
 
-	@media screen and (max-width: 1499px) {
+	@media screen and (max-width: 999px) {
 		.skills ul {
 			text-align: center;
 			max-width: 50em;

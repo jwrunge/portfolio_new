@@ -1,0 +1,76 @@
+[
+    {
+        "title": "Hammock CMS (alpha)",
+        "src": "site-thumbnails/hammock.jpg",
+        "alt": "Hammock CMS (alpha)",
+        "link": "<a href='https://hammockcms.com' target='_blank'>Open Alpha app</a>",
+        "code": false,
+        "description": "<p>Hammock is designed as a highly-configurable content management system, made to work with any front-end or backend framework and any design pattern. Currently in an open alpha development, with features being added monthly, Hammock makes it easy to configure tightly-controlled WYSYWYG editing interfaces for websites; integrates a robust data editor that exports to several common, real-world data formats; and a GUI API configurator that lets you roll up a login system or even run tasks on the host machine via RESTful API calls.</p><p>Hammock exposes all this via a central web-based editing system, but all data (including editor authenitication) is stored on the client's machine for maximum security and privacy.</p><p>The editing interface is written in JavaScript with Svelte; the core application is written in Go and runs as a binary file on Linux and Windows systems.</p>"
+    },
+    {
+        "title": "First Christian Church",
+        "src": "site-thumbnails/fcc.jpg",
+        "alt": "First Christian Church",
+        "link": "<a href='http://fccgalesburg.org' target='_blank'>FCC Galesburg</a>",
+        "code": "https://github.com/jwrunge/FCC_Svelte",
+        "description": "<p>The First Christian Church (Disciples of Christ) website features news and events (with a convenient method for adding events to a personal digital calendar) as well as catalogs past video worship services and newsletters.</p><p>Written in JavaScript using Svelte, and with the added challenge of having <em>only</em> FTP access, no access to the administrative dashboards that would allow setting up database connections. All dynamic file requests are done via the PHP filesystem tools, and nothing is stored in a database.</p>"
+    },
+    {  
+        "title": "Great Leather",
+        "src": "site-thumbnails/greatleather.jpg",
+        "alt": "Great Leather",
+        "link": "<a href='https://greatleather.com' target='_blank'>Leather Care Specialists / Great Leather</a>",
+        "code": false,
+        "description": "<p>The Great Leather / Leather Care Specialists website is a promotional site for a leather care business and an online storefront for bespoke leather goods. Be sure to check out the online cart management and checkout process &mdash; it's all custom!</p><p>Written in PHP and vanilla JavaScript and integrating with the USPS and PayPal APIs.</p>"
+    },
+    {
+        "title": "A Zappa Dappa Dat",
+        "src": "site-thumbnails/azappa.jpg",
+        "alt": "A Zappa Dappa Dat",
+        "focus": "middle",
+        "link": "<a href='https://azappadappadat.com' target='_blank'>A Zappa Dappa Dat</a>",
+        "code": "https://github.com/jwrunge/azappadappadat",
+        "description": "<p>A Zappa Dappa Dat provides custom music and stems for advertising, movies, TV, videogames, and more. The 'Zappa Dat' site is a simple promotional page with information about the company's services, short biographies about its employees, and links to music samples and relevant contacts.</p><p>The page was written in vanilla JavaScript, but templated in Pug and served via Node's Express web server.</p>"
+    },
+    {
+        "title": "FISH Food Pantry",
+        "src": "site-thumbnails/fish.jpg",
+        "alt": "FISH Food Pantry",
+        "link": "<a href='https://fishofgalesburg.org' target='_blank'>FISH Food Pantry</a>",
+        "code": false,
+        "description": "<p>A promotional website for FISH of Galesburg Food Bank that implements a blog-style custom CMS, which uploads and optimizes images (using Sharp image processing utilities and the TinyPNG API) and provides a WYSIWYG text editor.</p><p>Written in PHP (with the Lumen framework), with minimal JavaScript on the hidden CMS.</p><p><em>Note: because of the implementation of the CMS, font choice and layout are not necessarily mine.</em></p>"
+    },
+    {
+        "title": "Accommodate",
+        "src": "site-thumbnails/accom.jpg",
+        "alt": "Accommodate",
+        "link": "<a href='/downloadables/accommodate.zip' target='_blank'>Download link</a>",
+        "code": "https://github.com/jwrunge/accommodate",
+        "description": "<p>Accommodate is a service manager and notification generator for client service tracking and notification. It is designed to be flexible, so you can change the follwowing terminology to be whatever you want:</p><ul><li>Students</li><li>Services</li><li>Notices</li></ul><p>The app was made to teach myself Svelte's frontend framework and Electron; therefore it can be built to run on Windows, Linux, or Mac computers (though only Windows is accounted for in the build script) and it cannot run in the browser in its current state. While this app was a learning exercise, I made it to solve a particular problem in my day job as a college disability support coordinator, and I use nearly every day!</p><p>Instructions to fork the project and run it from your code editor are on the GitHub page; you can also download an executable from the download link above, which works on Windows.</p>"
+    },
+    {
+        "title": "DeepNav",
+        "src": "site-thumbnails/deepnav.jpg",
+        "alt": "DeepNav",
+        "link": "<a href='https://codepen.io/jwrunge/pen/eYWmQwY' target='_blank'>CodePen demo</a>",
+        "code": "https://github.com/jwrunge/DeepNav",
+        "description": "<p>The purpose of DeepNav is to provide a flexible, multilevel, drop-in navigation system that requires minimal in-HTML markup. DeepNav supports as many levels of navigation as good taste will allow, and then some. You need only set up a couple of divs and anchors, initialize DeepNav, and you're good to go!</p><p>DeepNav has no dependencies or requirements for use, and is made to be highly configurable.</p>"
+    },
+    {
+        "title": "Easy Modal",
+        "src": "site-thumbnails/modal.jpg",
+        "alt": "Easy Modal",
+        "focus": "middle",
+        "link": "<a href='https://codepen.io/jwrunge/pen/wvdvVOa' target='_blank'>CodePen demo</a>",
+        "code": "https://github.com/jwrunge/svelte-modal",
+        "description": "<p>This is an easy modal, written in Svelte but usable not just as a Svelte component, but in vanilla JavaScript (or any other framework you may be using, because Svelte is magic). It is intended to be:</p><ul><li>Quick to implement</li><li>Highly customizable</li><li>Easily stylable with a minimum of CSS</li><li>Fun to play with</li></ul>"
+    },
+    {
+        "title": "AniPath SVG Animator",
+        "src": "site-thumbnails/anipath.jpg",
+        "alt": "SVG Path Animator",
+        "link": "<a href='https://jsfiddle.net/jwrunge/agywh09x/' target='_blank'>JSFiddle demo</a>",
+        "code": "https://github.com/jwrunge/SVG-Path-Animator",
+        "description": "<p>A library to automate the animation of SVG paths, using JQuery and Velocity. This represents my early foray into creating reusable code libraries. While I would approach the same problem differently now (attempting to minimize dependencies and do as much work in vanilla JavaScript as possible), I think the result is very usable still today!</p>"
+    }
+]

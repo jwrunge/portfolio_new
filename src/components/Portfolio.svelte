@@ -43,11 +43,15 @@
 <section id='portfolio' bind:this={portfolio}>
     <div id='portfolio-grid' bind:this={portfolioGrid}>
         {#each entries as entry}
-            <div on:click={openPortModal(entry)} class='port-entry' style="background-image: url('{entry.src}')">
+            <div on:click={openPortModal(entry)} class='port-entry' class:centerbg={entry.focus == "middle"} style="background-image: url('{entry.src}')">
                 <div class='title'>{ entry.title }</div>
+                {#if entry.code}
+                    <div class="code-available">Code</div>
+                {/if}
             </div>
         {/each}
     </div>
+    <p style="text-align: center;">Code for this portfolio wesbite is available <a href="https://github.com/jwrunge/portfolio_new" target="_blank">here</a>.</p>
 </section>
 
 <style lang='scss'>
@@ -70,6 +74,10 @@
         border-width: 1px;
         border-style: solid;
         border-color: $darkblue;
+
+        &.centerbg {
+            background-position: top center;
+        }
 
         .title {
             position: absolute;
@@ -158,5 +166,16 @@
 			grid-row: span 2;
 		}
 	}
+
+    .code-available {
+        font-size: .75em;
+        background-color: $yellow;
+        color: $darkblue;
+        padding: .25em;
+        border-bottom-left-radius: 2px;
+        position: absolute;
+        top: 0; right: 0;
+        box-shadow: 0 0 5px black;
+    }
 
 </style>

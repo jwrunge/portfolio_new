@@ -22,6 +22,12 @@
 		mainEl.addEventListener("scroll", ()=> {
 			winScrollY = mainEl.scrollTop
 		})
+
+		window.addEventListener("hashchange", ()=> {
+			setTimeout(()=>{
+				window.location.hash = ""
+			}, 250)
+		})
 	})
 </script>
 
@@ -79,8 +85,8 @@
 			<h3>{portModalEntry.title}</h3>
 			<img src={portModalEntry.src} alt={portModalEntry.alt}>
 			<div>
-				{#if portModalEntry.link}<strong>Link: </strong><a href={portModalEntry.link} target="_blank">{portModalEntry.link}</a><br>{/if}
-				{#if portModalEntry.code}<strong>Code: </strong><a href={portModalEntry.code} target="_blank">{portModalEntry.code}</a><br>{/if}
+				{#if portModalEntry.link}<strong>Link: </strong>{@html portModalEntry.link}<br>{/if}
+				{#if portModalEntry.code}<strong>Code on </strong><a href={portModalEntry.code} target="_blank">GitHub</a><br>{/if}
 			</div>
 			{#if portModalEntry.description}
 				{@html portModalEntry.description}
@@ -184,6 +190,7 @@
 		margin-bottom: .5em;
 
 		@media screen and (min-width: 1000px) {
+			max-width: 40%;
 			float: right;
 			margin-left: 1em;
 		}

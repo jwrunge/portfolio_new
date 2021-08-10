@@ -117,7 +117,10 @@ a.box.white {
     }
 
     &.wide {
-        width: 90% !important;
+        width: 98% !important;
+        @media screen and (min-width: 800px) {
+            width: 80% !important;
+        }
         max-width: 100% !important;
     }
 }

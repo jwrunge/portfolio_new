@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500&display=swap");
+/* 
+
+    Body, fonts, and background
+*/
+html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 3840px;
+  height: 100vh;
+  padding: 0;
+  background-color: black;
+  overflow: hidden;
+  font: normal normal normal 18px "Pontano Sans", sans-serif;
+  background-color: #000;
+}
+@media screen and (min-width: 800px) {
+  body {
+    font-size: 20px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  body {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 2400px) {
+  body {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 3000px) {
+  body {
+    font-size: 42px;
+  }
+}
+@media screen and (min-width: 3840px) {
+  body {
+    font-size: 56px;
+  }
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  margin: 0;
+  margin-bottom: 0.4em;
+  padding: 0.5em 0 0 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  color: #03587c;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #03587c;
+}
+
+h3 {
+  font-size: 1.5em;
+  color: black;
+}
+
+h4 {
+  font-size: 1.12em;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 0.1em;
+}
+
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  color: gray;
+  margin-bottom: 0.1em;
+}
+
+h1.gradient-back {
+  color: white;
+  position: relative;
+  padding-top: 1em;
+  background-color: #0096d6;
+  background: linear-gradient(#0096d6, #03587c);
+}
+
+a {
+  color: #0096d6;
+  text-decoration: none;
+}
+a:hover {
+  color: #ffaa66;
+  text-decoration: underline;
+}
+
+/*
+    Pages
+*/
+.content {
+  background-color: #EEEEEE;
+  padding-top: 3em;
+}
+
+.darker-content {
+  background-color: #DDDDDD;
+}
+.darker-content h1 {
+  padding-top: 1em;
+}
+
+a.box {
+  display: inline-block;
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  border-color: #0096d6;
+  border-width: 2px;
+  border-style: solid;
+  transition: background-color 0.5s, border-color 0.5s;
+}
+a.box:hover {
+  text-decoration: none;
+  cursor: pointer;
+  border-color: #0096d6;
+  background-color: #0096d6;
+  color: white;
+}
+
+a.box.white {
+  color: white;
+  border-color: white;
+}
+a.box.white:hover {
+  border-color: #0096d6;
+}
+
+.modal-inner {
+  border-radius: 2px !important;
+}
+@media screen and (min-width: 1000px) {
+  .modal-inner:not(.wide) {
+    width: 40% !important;
+  }
+}
+@media screen and (max-width: 400px) {
+  .modal-inner:not(.wide) {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+.modal-inner.wide {
+  width: 98% !important;
+  max-width: 100% !important;
+}
+@media screen and (min-width: 800px) {
+  .modal-inner.wide {
+    width: 80% !important;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .modal-backdrop {
+    padding: 0.5rem !important;
+  }
+}
+
+.modal-closer {
+  font-size: 2em !important;
+}
+
+/*# sourceMappingURL=global.css.map */
