@@ -1,0 +1,133 @@
+@import "./variables.scss";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500&display=swap');
+
+/* 
+
+    Body, fonts, and background
+*/
+html {
+    overflow: hidden; 
+}
+
+body { 
+    margin: 0 auto;
+    max-width: 3840px;
+    height: 100vh;
+    padding: 0;
+    background-color: black;
+    overflow: hidden; 
+    font: normal normal normal 18px 'Pontano Sans', sans-serif;
+    background-color: #000;
+
+    @media screen and (min-width: 800px) {
+    font-size: 20px;
+    }
+
+    @media screen and (min-width: 1600px) {
+    font-size: 24px;
+    }
+
+    @media screen and (min-width: 2400px) {
+    font-size: 30px;
+    }
+
+    @media screen and (min-width: 3000px) {
+    font-size: 42px;
+    }
+
+    @media screen and (min-width: 3840px) {
+    font-size: 56px;
+    }
+}
+
+h1, h2, h3, h4, h5
+{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    margin: 0;
+    margin-bottom: .4em;
+    padding: .5em 0 0 0;
+}
+
+h1 { text-align: center; font-size: 3em; color: $darkblue;}
+h2 { font-size: 2em; font-weight: bold; color: $darkblue;}
+h3 { font-size: 1.5em; color: black;}
+h4 { font-size: 1.12em; font-weight: bold; color: black; margin-bottom: .1em;}
+h5 { font-size: 1em; font-weight: bold; color: gray; margin-bottom: .1em;}
+
+h1.gradient-back { color: white; position: relative; padding-top: 1em; background-color: $blue; background: linear-gradient($blue, $darkblue);}
+
+a {
+    color: $blue;
+    text-decoration: none;
+    &:hover {color: #ffaa66; text-decoration: underline;}
+}
+
+/*
+    Pages
+*/
+.content {
+    background-color: #EEEEEE;
+    padding-top: 3em;
+}
+
+.darker-content {
+    background-color: #DDDDDD;
+
+    h1 { padding-top: 1em; }
+}
+
+a.box {
+    display: inline-block;
+    margin: .5em;
+    padding: .5em 1em;
+    border-color: $blue;
+    border-width: 2px;
+    border-style: solid;
+    transition: background-color .5s, border-color .5s;
+
+    &:hover {
+    text-decoration: none;
+    cursor: pointer;
+    border-color: $blue;
+    background-color: $blue;
+    color: white;
+    }
+}
+
+a.box.white {
+    color: white;
+    border-color: white;
+
+    &:hover { border-color: $blue; }
+}
+
+.modal-inner {
+    border-radius: 2px !important;
+
+    &:not(.wide) {
+        @media screen and (min-width: 1000px) {
+            width: 40% !important;
+        }
+
+        @media screen and (max-width: 400px) {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+    }
+
+    &.wide {
+        width: 90% !important;
+        max-width: 100% !important;
+    }
+}
+
+.modal-backdrop {
+    @media screen and (max-width: 400px) {
+        padding: .5rem !important;
+    }
+}
+
+.modal-closer {
+    font-size: 2em !important;
+}
