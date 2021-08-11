@@ -1,11 +1,11 @@
 [
-    {  
-        "title": "Great Leather",
-        "src": "site-thumbnails/greatleather.jpg",
-        "alt": "Great Leather",
-        "link": "<a href='https://greatleather.com' target='_blank'>Leather Care Specialists / Great Leather</a>",
+    {
+        "title": "Hammock CMS (alpha)",
+        "src": "site-thumbnails/hammock.jpg",
+        "alt": "Hammock CMS (alpha)",
+        "link": "<a href='https://hammockcms.com' target='_blank'>Open Alpha app</a>",
         "code": false,
-        "description": "<p>The Great Leather / Leather Care Specialists website is a promotional site for a leather care business and an online storefront for bespoke leather goods. Be sure to check out the online cart management and checkout process &mdash; it's all custom!</p><p>Written in PHP and vanilla JavaScript and integrating with the USPS and PayPal APIs.</p>"
+        "description": "<p>Hammock is designed as a highly-configurable content management system, made to work with any front-end or backend framework and any design pattern. Currently in an open alpha development, with features being added monthly, Hammock makes it easy to configure tightly-controlled WYSYWYG editing interfaces for websites; integrates a robust data editor that exports to several common, real-world data formats; and a GUI API configurator that lets you roll up a login system or even run tasks on the host machine via RESTful API calls.</p><p>Hammock exposes all this via a central web-based editing system, but all data (including editor authenitication) is stored on the client's machine for maximum security and privacy.</p><p>The editing interface is written in JavaScript with Svelte; the core application is written in Go and runs as a binary file on Linux and Windows systems.</p>"
     },
     {
         "title": "First Christian Church",
@@ -14,6 +14,14 @@
         "link": "<a href='http://fccgalesburg.org' target='_blank'>FCC Galesburg</a>",
         "code": "https://github.com/jwrunge/FCC_Svelte",
         "description": "<p>The First Christian Church (Disciples of Christ) website features news and events (with a convenient method for adding events to a personal digital calendar) as well as catalogs past video worship services and newsletters.</p><p>Written in JavaScript using Svelte, and with the added challenge of having <em>only</em> FTP access, no access to the administrative dashboards that would allow setting up database connections. All dynamic file requests are done via the PHP filesystem tools, and nothing is stored in a database.</p>"
+    },
+    {  
+        "title": "Great Leather",
+        "src": "site-thumbnails/greatleather.jpg",
+        "alt": "Great Leather",
+        "link": "<a href='https://greatleather.com' target='_blank'>Leather Care Specialists / Great Leather</a>",
+        "code": false,
+        "description": "<p>The Great Leather / Leather Care Specialists website is a promotional site for a leather care business and an online storefront for bespoke leather goods. Be sure to check out the online cart management and checkout process &mdash; it's all custom!</p><p>Written in PHP and vanilla JavaScript and integrating with the USPS and PayPal APIs.</p>"
     },
     {
         "title": "A Zappa Dappa Dat",
@@ -64,13 +72,5 @@
         "link": "<a href='https://jsfiddle.net/jwrunge/agywh09x/' target='_blank'>JSFiddle demo</a>",
         "code": "https://github.com/jwrunge/SVG-Path-Animator",
         "description": "<p>A library to automate the animation of SVG paths, using JQuery and Velocity. This represents my early foray into creating reusable code libraries. While I would approach the same problem differently now (attempting to minimize dependencies and do as much work in vanilla JavaScript as possible), I think the result is very usable still today!</p>"
-    },
-    {
-        "title": "SwitchMenu",
-        "src": "site-thumbnails/switchmenu.jpg",
-        "alt": "Switch Menu",
-        "link": "<a href='https://jsfiddle.net/jwrunge/wvt74q5L/' target='_blank'>JSFiddle demo</a>",
-        "code": "https://github.com/jwrunge/switchmenu",
-        "description": "<p>An SPA framework written using JQuery, also implemented with Velocity.js, and taking advantage of the JavaScript history API. In practice, I now use more robust frameworks that handle data reactivity alongside SPA page state, such as Svelte and Vue; however, this was a big stepping stone in understanding how to manage state in an SPA!</p>"
     }
 ]
