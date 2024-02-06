@@ -1,12 +1,14 @@
 <script>
 	import {onMount} from "svelte"
+	import "./global.scss"
 	
 	import Splash from './components/Splash.svelte'
 	import About from './components/About.svelte'
 	import Portfolio from './components/Portfolio.svelte'
 	import ConcaveArrowDown from './components/ConcaveArrowDown.svelte'
 	import ConvexArrowDown from './components/ConvexArrowDown.svelte'
-	import Modal from "@jwrunge/modal/dist/Modal.svelte"
+	// @ts-ignore
+	import Modal from "@jwrunge/modal/src/Modal.svelte"
 
     let contactModalOpen = false
 	let isThin = window.outerWidth < 700
