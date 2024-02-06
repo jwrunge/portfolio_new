@@ -1,10 +1,17 @@
-<script>
-    import {onMount} from "svelte"
+<script lang=ts>
+    import {onMount} from "svelte";
 
-    let entries = []
-    export let portModalOpen = false
-    export let portModalEntry = {}
-    let portfolio, portfolioGrid
+    type PortfolioEntry = { 
+        title: string, 
+        code: string,
+        src: string,
+        focus: string,
+    };
+
+    let entries: PortfolioEntry[] = [];
+    export let portModalOpen = false;
+    export let portModalEntry = {};
+    let portfolio: HTMLElement, portfolioGrid: HTMLElement;
 
     //Get portfolio entries
 	function getPortfolioEntries() {
@@ -13,37 +20,42 @@
 		xhr.responseType = 'json';
 		xhr.onreadystatechange = function() {
 			if(xhr.readyState === 4 && xhr.status === 200) {
-				entries = xhr.response
+				entries = xhr.response;
 			}
 		}
 		xhr.send()
 	}
       
-    function openPortModal(entry) {
-        portModalEntry = entry
-        portModalOpen = true
-        console.log(portModalOpen)
+    function openPortModal(entry: PortfolioEntry) {
+        portModalEntry = entry;
+        portModalOpen = true;
     }
 
     onMount(()=> {
-        let wrapper = document.querySelector("main")
+        let wrapper = document.querySelector("main");
         let portfolioListener = ()=> {
             if(portfolioGrid.getBoundingClientRect().top - window.innerHeight/2 <= 0) {
-                portfolio.classList.add('shown')
-                setTimeout(()=>{ portfolio.classList.add('nodelay') }, 1000)
-                wrapper.removeEventListener('scroll', portfolioListener)
+                portfolio.classList.add('shown');
+                setTimeout(()=>{ portfolio.classList.add('nodelay') }, 1000);
+                wrapper?.removeEventListener('scroll', portfolioListener);
             }
         }
 
-        getPortfolioEntries()
-        wrapper.addEventListener('scroll', portfolioListener)
+        getPortfolioEntries();
+        wrapper?.addEventListener('scroll', portfolioListener);
     })
 </script>
 
 <section id='portfolio' bind:this={portfolio}>
     <div id='portfolio-grid' bind:this={portfolioGrid}>
         {#each entries as entry}
-            <div on:click={openPortModal(entry)} class='port-entry' class:centerbg={entry.focus == "middle"} style="background-image: url('{entry.src}')">
+            <div 
+                role="button" tabindex="0"
+                class='port-entry' class:centerbg={entry.focus == "middle"} 
+                style="background-image: url('{entry.src}')"
+                on:click={()=> openPortModal(entry)}
+                on:keydown={e => {if(e.key === "Enter") openPortModal(entry)}}
+            >
                 <div class='title'>{ entry.title }</div>
                 {#if entry.code}
                     <div class="code-available">Code</div>
@@ -108,12 +120,6 @@
         filter: brightness(0);
         transform: translateZ(-.25px);
         opacity: 0;
-    }
-
-	#portfolio.shown .port-entry {
-        filter: brightness(1);
-        transform: translateZ(0px);
-        opacity: 1;
     }
 
     #portfolio .port-entry {

@@ -1,5 +1,5 @@
 <script>
-    export let isGray = false
+    export let isGray = false;
 </script>
 
 <svg

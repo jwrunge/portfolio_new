@@ -1,19 +1,18 @@
-<script>
-	import { onMount } from "svelte"
-
-	let about
+<script lang=ts>
+	import { onMount } from "svelte";
+	let about: HTMLElement, wrapper: HTMLElement;
 
 	onMount(()=>{
-		let wrapper = document.querySelector("main")
+		let wrapper = document.querySelector("main");
 		let aboutListener = ()=> {
 			if(about.getBoundingClientRect().top - window.innerHeight/2 <= 0) {
-				about.classList.add('shown')
+				about.classList.add('shown');
 			}
 
-			window.removeEventListener("scroll", aboutListener)
+			window.removeEventListener("scroll", aboutListener);
 		}
 
-		wrapper.addEventListener('scroll', aboutListener)
+		wrapper?.addEventListener('scroll', aboutListener);
 	})
 </script>
 
@@ -212,11 +211,6 @@
 		#about:not(.shown) .quick-bio {
 			opacity: 0;
 		}
-	}
-
-	#about.shown > * {
-		opacity: 1;
-		transform: translateX(0);
 	}
 
 	@media screen and (max-width: 999px) {
