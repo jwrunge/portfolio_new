@@ -9,6 +9,8 @@
 	import ConvexArrowDown from './components/ConvexArrowDown.svelte';
 	//@ts-ignore
 	import Modal from "@jwrunge/modal/src/Modal.svelte";
+    import { Canvas } from "@threlte/core";
+    import Phone from "./threlte/Phone.svelte";
 
     let contactModalOpen = false
 	let isThin = window.outerWidth < 700
@@ -51,19 +53,31 @@
 		</video>
 	{/if}
 
-	<!-- Viewable if allLoaded - contains main sections -->
+	<div class="follower">
+		<Canvas>
+			<Phone/>
+		</Canvas>
+	</div>
+
+	<!-- Splash screen -->
 	<Splash></Splash>
 	<ConcaveArrowDown isGray={true}></ConcaveArrowDown>
+
+	<!-- Projects -->
 	<div class='content'>
 		<h1 id='abouthash'>Selected Projects</h1>
 		<Portfolio bind:portModalEntry bind:portModalOpen></Portfolio>
 	</div>
+
+	<!-- About me -->
 	<div class='darker-content'>
 		<ConvexArrowDown isGray={true}></ConvexArrowDown>
 		<h1>Let's build something awesome!</h1>
 		<About></About>
 		<ConcaveArrowDown></ConcaveArrowDown>
 	</div>
+
+	<!-- Footer -->
 	<div id='footer'>
 		<h1 class='gradient-back'>Get in touch!</h1>
 		<div id='getintouch'>
@@ -74,6 +88,7 @@
 	</div>
 </main>
 
+<!-- Contact modal -->
 {#if contactModalOpen}
 	<Modal bgclose={true} on:close={()=> {contactModalOpen = false}}>
 		<h2>Want to get in touch?</h2>
@@ -88,6 +103,7 @@
 	</Modal>
 {/if}
 
+<!-- Portfolio modal -->
 {#if portModalOpen}
     <Modal wide={true} bgclose={true} on:close={()=> {portModalOpen = false}}>
         <div class="port-modal-entry">
@@ -188,4 +204,10 @@
 		}
 	}
 
+	.follower {
+		position: fixed;
+		top: 0; left: 0;
+		width: 100%; height: 100%;
+		z-index: 1;
+	}
 </style>
