@@ -1,22 +1,29 @@
-<script>
-	import {onMount} from "svelte"
-	import "./global.scss"
+<script lang=ts>
+	import {onMount} from "svelte";
+	import "./global.scss";
 	
-	import Splash from './components/Splash.svelte'
-	import About from './components/About.svelte'
-	import Portfolio from './components/Portfolio.svelte'
-	import ConcaveArrowDown from './components/ConcaveArrowDown.svelte'
-	import ConvexArrowDown from './components/ConvexArrowDown.svelte'
-	// @ts-ignore
-	import Modal from "@jwrunge/modal/src/Modal.svelte"
+	import Splash from './components/Splash.svelte';
+	import About from './components/About.svelte';
+	import Portfolio from './components/Portfolio.svelte';
+	import ConcaveArrowDown from './components/ConcaveArrowDown.svelte';
+	import ConvexArrowDown from './components/ConvexArrowDown.svelte';
+	//@ts-ignore
+	import Modal from "@jwrunge/modal/src/Modal.svelte";
 
     let contactModalOpen = false
 	let isThin = window.outerWidth < 700
-	let mainEl
-	let winScrollY
-	let video
+	let mainEl: HTMLElement
+	let winScrollY: number
+	let video: HTMLVideoElement
 	let portModalOpen = false
-	let portModalEntry = {}
+	let portModalEntry: {
+		title?: string,
+		src?: string,
+		alt?: string,
+		link?: string,
+		code?: string,
+		description?: string
+	} = {}
 
 	onMount(()=> {
 		if(video) video.play()
@@ -37,9 +44,9 @@
 <main bind:this={mainEl}>
 	<!-- Background -->
 	{#if isThin}
-		<div id='bgimg' style="transform: translate(0, {winScrollY/1.5}px)" alt=""></div>
+		<div id='bgimg' style="transform: translate(0, {winScrollY/1.5}px)"></div>
 	{:else}
-		<video id='bg' style="transform: translate(0, {winScrollY/1.5}px)" alt='' bind:this={video} muted>
+		<video id='bg' style="transform: translate(0, {winScrollY/1.5}px)" bind:this={video} muted>
 			<source src='assets/video/Coffee_orig.mp4' type='video/mp4'/>
 		</video>
 	{/if}
@@ -138,19 +145,6 @@
 		margin: 1em 1em 1em 0;
 	}
 
-	.two-part {
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-
-		p { margin-bottom: 0; }
-	}
-
-	.arrow-down {
-		width: 100%;
-		height: 3em;
-	}
-
 	#social-list {
 		display: flex;
 		justify-content: center;
@@ -173,10 +167,6 @@
 		max-width: 40em;
 		margin: 0 auto;
 		text-align: center;
-		}
-
-		p + p {
-		margin-top: 1em;
 		}
 
 		a {
