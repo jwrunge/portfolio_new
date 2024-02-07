@@ -7,6 +7,8 @@
     export let instance: BInstance | undefined = undefined;
     export let settings: ElementSettings = {};
 
+    $: elementSettings(canvas, settings);
+
     onMount(() => {
         instance = new BInstance(canvas);
     });
@@ -19,5 +21,5 @@
     });
 </script>
 
-<canvas bind:this={canvas} use:elementSettings={settings}></canvas>
+<canvas bind:this={canvas}></canvas>
 <slot {instance}></slot>

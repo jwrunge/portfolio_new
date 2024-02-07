@@ -41,10 +41,7 @@
 		})
 	})
 
-	let settings: ElementSettings = { style: { background: "blue" }}
-	setTimeout(()=> {
-		if(settings?.style) settings.style.background = "red";
-	}, 1000)
+	let settings: ElementSettings = { style: { background: "blue" }};
 </script>
 
 <!-- Main sections -->
