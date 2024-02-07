@@ -1,9 +1,10 @@
 import { Engine, Scene } from "@babylonjs/core";
+import type { BScene } from "./scene";
 
 export class BEngine {
     self: Engine;
     canvas: HTMLCanvasElement;
-    scenes: Map<string, Scene> = new Map();
+    scenes: Map<string, BScene> = new Map();
 
     constructor(canvas: HTMLCanvasElement) {
         this.canvas = canvas;
@@ -11,7 +12,7 @@ export class BEngine {
 
         this.self.runRenderLoop(() => {
             this.scenes.forEach((scene) => {
-                if(scene.active) scene.render();
+                if(scene.active) scene.self?.render();
             });
         });
     }
@@ -20,12 +21,12 @@ export class BEngine {
         return this.scenes.get(id);
     }
 
-    registerScene(id: string, scene: Scene) {
+    registerScene(id: string, scene: BScene) {
         this.scenes.set(id, scene);
     }
 
     removeScene(id: string) {
-        this.scenes.get(id)?.dispose();
+        this.scenes.get(id)?.self?.dispose();
         this.scenes.delete(id);
     }
 }

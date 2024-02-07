@@ -13,6 +13,6 @@ export class BScene {
         this.self = new Scene(engine.self);
         this.active = active;
 
-        this.engine.registerScene(id, this.self);
+        this.engine.registerScene(id, this);
     }
 }
