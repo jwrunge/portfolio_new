@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onDestroy, onMount } from "svelte";
-    import { BEngine } from "./babylon/engine";
+    import { BEngine } from "../babylon/engine";
 
     export let init: (( canvas: HTMLCanvasElement )=> void ) | undefined;
     export let onResize: (( canvas: HTMLCanvasElement )=> void ) | undefined;
