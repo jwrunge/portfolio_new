@@ -10,6 +10,7 @@
 	//@ts-ignore
 	import Modal from "@jwrunge/modal/src/Modal.svelte";
     import CanvasScene from "./3d/core/CanvasScene.svelte";
+    import type { ElementSettings } from "./3d/core/util";
 
     let contactModalOpen = false
 	let isThin = window.outerWidth < 700
@@ -39,6 +40,11 @@
 			}, 250)
 		})
 	})
+
+	let settings: ElementSettings = { style: { background: "blue" }}
+	setTimeout(()=> {
+		if(settings?.style) settings.style.background = "red";
+	}, 1000)
 </script>
 
 <!-- Main sections -->
@@ -53,7 +59,7 @@
 	{/if}
 
 	<div class="follower">
-		<CanvasScene/>
+		<CanvasScene settings={settings}/>
 	</div>
 
 	<!-- Splash screen -->

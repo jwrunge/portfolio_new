@@ -1,26 +1,23 @@
 <script lang="ts">
     import { onDestroy, onMount } from "svelte";
-    import { BEngine } from "../babylon/engine";
+    import { BInstance } from "../babylon/engine";
+    import { elementSettings, type ElementSettings } from "./util";
 
-    export let init: (( canvas?: HTMLCanvasElement )=> void ) | undefined = undefined;
-    export let onResize: (( canvas?: HTMLCanvasElement )=> void ) | undefined = undefined;
     export let canvas: HTMLCanvasElement | undefined = undefined;
-    export let engine: BEngine | undefined = undefined;
-
-    function resizeHook() {
-        onResize?.(canvas);
-    }
+    export let instance: BInstance | undefined = undefined;
+    export let settings: ElementSettings = {};
 
     onMount(() => {
-        init?.(canvas);
-        canvas?.addEventListener("resize", resizeHook);
-        engine = new BEngine(canvas)
+        instance = new BInstance(canvas);
     });
 
     onDestroy(()=> {
-        canvas?.removeEventListener("resize", resizeHook);
+        for(let [_, scene] of instance?.scenes || []) {
+            scene?.self?.dispose();
+        }
+        instance?.engine?.dispose();
     });
 </script>
 
-<canvas bind:this={canvas}></canvas>
-<slot {engine}></slot>
+<canvas bind:this={canvas} use:elementSettings={settings}></canvas>
+<slot {instance}></slot>

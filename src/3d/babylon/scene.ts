@@ -1,23 +1,23 @@
 import { Scene } from "@babylonjs/core";
-import { BEngine } from "./engine";
+import { BInstance } from "./engine";
 
 export class BScene {
     id: string;
     self?: Scene;
-    engine: BEngine;
+    instance: BInstance;
     active: boolean;
     
-    constructor(id: string, engine: BEngine, active = true) {
+    constructor(id: string, instance: BInstance, active = true) {
         this.id = id;
-        this.engine = engine;
+        this.instance = instance;
         this.active = active;
 
-        if(!engine.self) {
-            alert("Engine not found!");
+        if(!instance.engine) {
+            alert("instance not found!");
             return;
         }
-        this.self = new Scene(engine?.self);
+        this.self = new Scene(instance?.engine);
 
-        this.engine.registerScene(id, this);
+        this.instance.registerScene(id, this);
     }
 }

@@ -21,6 +21,7 @@
     "vite": "^4.4.5"
   },
   "dependencies": {
-    "@jwrunge/modal": "^1.0.6"
+    "@jwrunge/modal": "^1.0.6",
+    "csstype": "^3.1.3"
   }
 }
