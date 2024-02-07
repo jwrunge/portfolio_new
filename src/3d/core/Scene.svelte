@@ -2,8 +2,8 @@
     import { BEngine } from "../babylon/engine";
     import type { BScene } from "../babylon/scene";
 
-    export let engine: BEngine;
-    export let scene: BScene;
+    export let engine: BEngine | undefined = undefined;
+    export let scene: BScene | undefined = undefined;
 </script>
 
 <slot {engine} {scene}></slot>

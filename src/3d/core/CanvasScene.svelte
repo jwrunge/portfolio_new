@@ -4,11 +4,11 @@
     import Canvas from "./Canvas.svelte";
     import Scene from "./Scene.svelte";
 
-    export let init: (( canvas: HTMLCanvasElement )=> void ) | undefined;
-    export let onResize: (( canvas: HTMLCanvasElement )=> void ) | undefined;
-    export let canvas: HTMLCanvasElement;
-    export let engine: BEngine;
-    export let scene: BScene;
+    export let init: (( canvas?: HTMLCanvasElement )=> void ) | undefined = undefined;
+    export let onResize: (( canvas?: HTMLCanvasElement )=> void ) | undefined = undefined;
+    export let canvas: HTMLCanvasElement | undefined = undefined;
+    export let engine: BEngine | undefined = undefined;
+    export let scene: BScene | undefined = undefined;
 </script>
 
 <Canvas {init} {onResize} bind:canvas bind:engine>

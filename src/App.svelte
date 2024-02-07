@@ -9,7 +9,7 @@
 	import ConvexArrowDown from './components/ConvexArrowDown.svelte';
 	//@ts-ignore
 	import Modal from "@jwrunge/modal/src/Modal.svelte";
-    import Phone from "./3d/Phone.svelte";
+    import CanvasScene from "./3d/core/CanvasScene.svelte";
 
     let contactModalOpen = false
 	let isThin = window.outerWidth < 700
@@ -53,7 +53,7 @@
 	{/if}
 
 	<div class="follower">
-		<Phone></Phone>
+		<CanvasScene/>
 	</div>
 
 	<!-- Splash screen -->

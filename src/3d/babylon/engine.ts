@@ -1,13 +1,17 @@
-import { Engine, Scene } from "@babylonjs/core";
+import { Engine } from "@babylonjs/core";
 import type { BScene } from "./scene";
 
 export class BEngine {
-    self: Engine;
-    canvas: HTMLCanvasElement;
+    self?: Engine;
+    canvas?: HTMLCanvasElement;
     scenes: Map<string, BScene> = new Map();
 
-    constructor(canvas: HTMLCanvasElement) {
+    constructor(canvas?: HTMLCanvasElement) {
         this.canvas = canvas;
+        if(!canvas) {
+            alert("Canvas not found!");
+            return;
+        }
         this.self = new Engine(canvas, true);
 
         this.self.runRenderLoop(() => {
