@@ -8,12 +8,9 @@
     export let canvas: HTMLCanvasElement | undefined = undefined;
     export let instance: BInstance | undefined = undefined;
     export let scene: BScene | undefined = undefined;
-    export let style: ElementSettings["style"] = {};
-    export let settings: ElementSettings = { style };
-
-    let settingsCombo = { ...settings, style };
+    export let settings: ElementSettings = {};
 </script>
 
-<Canvas settings={settingsCombo} bind:canvas bind:instance>
+<Canvas settings={settings} bind:canvas bind:instance>
     <Scene {instance} bind:scene></Scene>
 </Canvas>

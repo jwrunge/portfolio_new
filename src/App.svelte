@@ -11,6 +11,7 @@
 	import Modal from "@jwrunge/modal/src/Modal.svelte";
     import CanvasScene from "./3d/core/CanvasScene.svelte";
     import type { ElementSettings } from "./3d/core/util";
+    import { WebXRHitTest } from "@babylonjs/core";
 
     let contactModalOpen = false
 	let isThin = window.outerWidth < 700
@@ -41,7 +42,7 @@
 		})
 	})
 
-	let settings: ElementSettings = { style: { background: "blue" }};
+	let canvasStyle: ElementSettings["style"] = { border: "2px solid yellow", width: "calc(100% - 4px)", height: "calc(100% - 4px)" };
 </script>
 
 <!-- Main sections -->
@@ -56,7 +57,7 @@
 	{/if}
 
 	<div class="follower">
-		<CanvasScene settings={settings}/>
+		<CanvasScene settings={{ style: canvasStyle }}/>
 	</div>
 
 	<!-- Splash screen -->
