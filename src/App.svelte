@@ -9,8 +9,8 @@
 	import ConvexArrowDown from './components/ConvexArrowDown.svelte';
 	//@ts-ignore
 	import Modal from "@jwrunge/modal/src/Modal.svelte";
-    import { Canvas } from "@threlte/core";
-    import Phone from "./threlte/Phone.svelte";
+    // import { Canvas } from "@threlte/core";
+    // import Phone from "./threlte/Phone.svelte";
 
     let contactModalOpen = false
 	let isThin = window.outerWidth < 700
@@ -54,9 +54,9 @@
 	{/if}
 
 	<div class="follower">
-		<Canvas>
+		<!-- <Canvas>
 			<Phone/>
-		</Canvas>
+		</Canvas> -->
 	</div>
 
 	<!-- Splash screen -->
