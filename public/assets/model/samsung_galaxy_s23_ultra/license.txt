@@ -1,0 +1,11 @@
+Model Information:
+* title:	Samsung galaxy S23 Ultra
+* source:	https://sketchfab.com/3d-models/samsung-galaxy-s23-ultra-2dac49c43d7349e1b68369627a581386
+* author:	brightd (https://sketchfab.com/brightd)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Samsung galaxy S23 Ultra" (https://sketchfab.com/3d-models/samsung-galaxy-s23-ultra-2dac49c43d7349e1b68369627a581386) by brightd (https://sketchfab.com/brightd) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

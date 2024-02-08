@@ -1,0 +1,11 @@
+Model Information:
+* title:	Picture Frame - Cat
+* source:	https://sketchfab.com/3d-models/picture-frame-cat-e8cb524744e241819dad80c3d459c676
+* author:	Valo Niskanen (https://sketchfab.com/Valo.Niskanen)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Picture Frame - Cat" (https://sketchfab.com/3d-models/picture-frame-cat-e8cb524744e241819dad80c3d459c676) by Valo Niskanen (https://sketchfab.com/Valo.Niskanen) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)

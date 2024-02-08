@@ -1,0 +1,11 @@
+Model Information:
+* title:	Logitech MX master 2S (@danish_blends)
+* source:	https://sketchfab.com/3d-models/logitech-mx-master-2s-danish-blends-e8f3235951934a01aba4e0ee3de72e71
+* author:	danish_blends (https://sketchfab.com/danish_blends)
+
+Model License:
+* license type:	CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
+* requirements:	Author must be credited. No commercial use.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Logitech MX master 2S (@danish_blends)" (https://sketchfab.com/3d-models/logitech-mx-master-2s-danish-blends-e8f3235951934a01aba4e0ee3de72e71) by danish_blends (https://sketchfab.com/danish_blends) licensed under CC-BY-NC-4.0 (http://creativecommons.org/licenses/by-nc/4.0/)
