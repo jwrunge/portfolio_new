@@ -9,9 +9,8 @@
 	import ConvexArrowDown from './components/ConvexArrowDown.svelte';
 	//@ts-ignore
 	import Modal from "@jwrunge/modal/src/Modal.svelte";
-    import CanvasScene from "./3d/core/CanvasScene.svelte";
     import type { ElementSettings } from "./3d/core/util";
-    import { WebXRHitTest } from "@babylonjs/core";
+    import Canvas from "./3d/core/Canvas.svelte";
 
     let contactModalOpen = false
 	let isThin = window.outerWidth < 700
@@ -57,7 +56,7 @@
 	{/if}
 
 	<div class="follower">
-		<CanvasScene settings={{ style: canvasStyle }}/>
+		<Canvas settings={{ style: canvasStyle }}/>
 	</div>
 
 	<!-- Splash screen -->

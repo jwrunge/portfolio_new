@@ -8,7 +8,6 @@ export type ElementSettings = {
     pos?: boolean | Positioning,
     style?: false | CSS.Properties,
     init?: (( canvas?: HTMLElement )=> void ),
-    onResize?: (( canvas?: HTMLElement )=> void ),
 }
 
 function getSettingValue<T>(value: T |  undefined, defaultValue: T): T {
@@ -30,8 +29,4 @@ export function elementSettings(el?: HTMLElement, settings?: ElementSettings) {
     }
 
     settings?.init?.(el);
-    if(settings?.onResize) {
-        settings?.onResize(el);
-        el.addEventListener("resize", ()=> settings?.onResize?.(el));
-    }
 }

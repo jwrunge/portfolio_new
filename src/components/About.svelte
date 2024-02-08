@@ -34,38 +34,38 @@
 			<h2>Front-end</h2>
 			<ul>
 				<span class='unbreakable'>
-					<li><img src='../assets/tool-symbols/html5.png' alt="HTML5"/>HTML5</li>
-					<li><img src='../assets/tool-symbols/css3.svg' alt="CSS3"/>CSS3</li>
-					<li><img src='../assets/tool-symbols/sass.png' alt="Sass"/>SASS</li>
+					<li><img src='/assets/tool-symbols/html5.png' alt="HTML5"/>HTML5</li>
+					<li><img src='/assets/tool-symbols/css3.svg' alt="CSS3"/>CSS3</li>
+					<li><img src='/assets/tool-symbols/sass.png' alt="Sass"/>SASS</li>
 				</span>
 				<span class='unbreakable'>
-					<li><img src='../assets/tool-symbols/js.png' alt="JavaScript"/>JavaScript</li>
-					<li><img src='../assets/tool-symbols/svelte.png' alt="Svelte"/>Svelte</li>
-					<li><img src='../assets/tool-symbols/vue.png' alt="Vue"/>Vue.js</li>
+					<li><img src='/assets/tool-symbols/js.png' alt="JavaScript"/>JavaScript</li>
+					<li><img src='/assets/tool-symbols/svelte.png' alt="Svelte"/>Svelte</li>
+					<li><img src='/assets/tool-symbols/vue.png' alt="Vue"/>Vue.js</li>
 				</span>
 			</ul>
 			<h2>Back-end and Systems</h2>
 			<ul>
 				<span class='unbreakable'>
-					<li><img src='../assets/tool-symbols/php.png' alt="PHP"/>PHP</li>
-					<li><img src='../assets/tool-symbols/golang.png' alt="Go"/>Go</li>
-					<li><img src='../assets/tool-symbols/node.svg'  alt="Node"/>Node.js</li>
+					<li><img src='/assets/tool-symbols/php.png' alt="PHP"/>PHP</li>
+					<li><img src='/assets/tool-symbols/golang.png' alt="Go"/>Go</li>
+					<li><img src='/assets/tool-symbols/node.svg'  alt="Node"/>Node.js</li>
 				</span>
 				<span class='unbreakable'>
-					<li><img src='../assets/tool-symbols/sql.png' alt="SQL"/>SQL</li>
-					<li><img src='../assets/tool-symbols/linux.png' alt="Linux"/>Linux</li>
-					<li><img src='../assets/tool-symbols/nginx.png' alt="Nginx"/>Nginx</li>
+					<li><img src='/assets/tool-symbols/sql.png' alt="SQL"/>SQL</li>
+					<li><img src='/assets/tool-symbols/linux.png' alt="Linux"/>Linux</li>
+					<li><img src='/assets/tool-symbols/nginx.png' alt="Nginx"/>Nginx</li>
 				</span>
 			</ul>
 			<h2>Tools</h2>
 			<ul>
 				<span class='unbreakable'>
-					<li><img src='../assets/tool-symbols/github.png' alt="GitHub"/>GitHub</li>
-					<li><img src='../assets/tool-symbols/npm.png' alt="NPM"/>NPM</li>
+					<li><img src='/assets/tool-symbols/github.png' alt="GitHub"/>GitHub</li>
+					<li><img src='/assets/tool-symbols/npm.png' alt="NPM"/>NPM</li>
 				</span>
 				<span class='unbreakable'>
-					<li><img src='../assets/tool-symbols/webpack.png' alt="Webpack"/>Webpack</li>
-					<li><img src='../assets/tool-symbols/rollup.png' alt="Rollup"/>Rollup</li>
+					<li><img src='/assets/tool-symbols/webpack.png' alt="Webpack"/>Webpack</li>
+					<li><img src='/assets/tool-symbols/rollup.png' alt="Rollup"/>Rollup</li>
 				</span>
 			</ul>
 		</div>
@@ -114,7 +114,7 @@
 	}
 
 	#me {
-		background-image: url('../assets/mnj.jpg');
+		background-image: url('/assets/mnj.jpg');
 		width: 100%;
 		height: 70vh;
 		position: relative;

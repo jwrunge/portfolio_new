@@ -7,24 +7,29 @@ export class BInstance {
     scenes: Map<string, BScene> = new Map();
     antialias = true;
     options?: EngineOptions;
-    adaptToDeviceRatio = true;
+    adaptToDeviceRatio = false;
 
     constructor(
         canvases?: HTMLCanvasElement | {[key: string]: HTMLCanvasElement},
         antialias = true,
         options?: EngineOptions,
-        adaptToDeviceRatio = true,
+        adaptToDeviceRatio = false,
     ) {
+        let defaultCanvas: HTMLCanvasElement | null = null;
         if(canvases instanceof HTMLCanvasElement) {
             this.canvases.set("default", canvases);
+            defaultCanvas = canvases;
         }
         else if(canvases instanceof Map) {
             for(let [key, value] of canvases) {
                 this.canvases.set(key, value);
+                if(!defaultCanvas) defaultCanvas = value;
             }
         }
 
-        this.engine = new Engine(null, antialias, options, adaptToDeviceRatio);
+        this.engine = new Engine(defaultCanvas, antialias, options, adaptToDeviceRatio);
+
+        console.log(this.engine, this.canvases, this.scenes)
 
         this.engine.runRenderLoop(() => {
             this.scenes.forEach((scene) => {
