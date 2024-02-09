@@ -48,8 +48,10 @@
         table.material = tableMaterial;
 
         // SceneLoader.ImportMesh("", "/assets/model/dell_xps_13_plus_closed/", "scene.gltf");
-        SceneLoader.Append("/assets/model/iphone_14_pro/", "scene.gltf", scene, (scene) => {
-            console.log(scene)
+        SceneLoader.Append("/assets/model/apple_ipad_pro/", "scene.glb", scene, (scene) => {
+            console.log(scene);
+            console.log(scene.getMeshById("__root__"));
+            if(scene.getMeshById("__root__") !== null) scene.getMeshById("__root__").position = new Vector3(0, 0, 0);
         });
 
         camera.attachControl(canvas, true);
