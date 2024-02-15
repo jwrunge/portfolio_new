@@ -33,8 +33,8 @@
         });
 
         // camera.attachControl(canvas, true);
-        var light1: HemisphericLight = new HemisphericLight("light1", new Vector3(5, 5, 0), scene);
-        light1.intensity = 0.5;
+        var light1: HemisphericLight = new HemisphericLight("light1", new Vector3(1, 1, -1), scene);
+        light1.intensity = 0.3;
 
         // hide/show the Inspector
         window.addEventListener("keydown", (ev) => {
