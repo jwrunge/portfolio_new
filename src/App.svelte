@@ -9,8 +9,7 @@
 	import ConvexArrowDown from './components/ConvexArrowDown.svelte';
 	//@ts-ignore
 	import Modal from "@jwrunge/modal/src/Modal.svelte";
-    import type { ElementSettings } from "./3d/core/util";
-    import Canvas from "./3d/core/Canvas.svelte";
+    import MainScene from "./3d/core/MainScene.svelte";
 
     let contactModalOpen = false
 	let isThin = window.outerWidth < 700
@@ -40,8 +39,6 @@
 			}, 250)
 		})
 	})
-
-	let canvasStyle: ElementSettings["style"] = { border: "2px solid yellow", width: "calc(100% - 4px)", height: "calc(100% - 4px)" };
 </script>
 
 <!-- Main sections -->
@@ -56,7 +53,7 @@
 	{/if}
 
 	<div class="follower">
-		<Canvas settings={{ style: canvasStyle }}/>
+		<MainScene/>
 	</div>
 
 	<!-- Splash screen -->
